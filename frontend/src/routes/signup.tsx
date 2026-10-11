@@ -51,7 +51,7 @@ export const Route = createFileRoute("/signup")({
   head: () => ({
     meta: [
       {
-        title: "Sign Up - FastAPI Template",
+        title: "EngineerYourPath - Join Engineers Worldwide",
       },
     ],
   }),
@@ -87,7 +87,13 @@ function SignUp() {
           className="flex flex-col gap-6"
         >
           <div className="flex flex-col items-center gap-2 text-center">
-            <h1 className="text-2xl font-bold">Create an account</h1>
+            <h1 className="text-3xl font-bold text-blue-600">Join EngineerYourPath</h1>
+            <p className="text-sm font-medium text-gray-600 dark:text-gray-300">
+              For All Engineers Worldwide
+            </p>
+            <p className="text-xs text-gray-500 text-center">
+              Create your free account and start your engineering journey
+            </p>
           </div>
 
           <div className="grid gap-4">
@@ -100,7 +106,7 @@ function SignUp() {
                   <FormControl>
                     <Input
                       data-testid="full-name-input"
-                      placeholder="User"
+                      placeholder="Engr. John Doe"
                       type="text"
                       {...field}
                     />
@@ -119,7 +125,7 @@ function SignUp() {
                   <FormControl>
                     <Input
                       data-testid="email-input"
-                      placeholder="user@example.com"
+                      placeholder="engineer@example.com"
                       type="email"
                       {...field}
                     />
@@ -138,7 +144,7 @@ function SignUp() {
                   <FormControl>
                     <PasswordInput
                       data-testid="password-input"
-                      placeholder="Password"
+                      placeholder="Create Password"
                       {...field}
                     />
                   </FormControl>
@@ -170,14 +176,14 @@ function SignUp() {
               className="w-full"
               loading={signUpMutation.isPending}
             >
-              Sign Up
+              Create My Engineer Account
             </LoadingButton>
           </div>
 
           <div className="text-center text-sm">
-            Already have an account?{" "}
-            <RouterLink to="/login" className="underline underline-offset-4">
-              Log in
+            Already an Engineer?{" "}
+            <RouterLink to="/login" className="underline underline-offset-4 font-semibold text-blue-600">
+              Enter Your Path
             </RouterLink>
           </div>
         </form>
