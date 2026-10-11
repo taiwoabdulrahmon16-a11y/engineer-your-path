@@ -44,7 +44,7 @@ export const Route = createFileRoute("/login")({
   head: () => ({
     meta: [
       {
-        title: "Log In - FastAPI Template",
+        title: "EngineerYourPath - For All Engineers",
       },
     ],
   }),
@@ -75,7 +75,17 @@ function Login() {
           className="flex flex-col gap-6"
         >
           <div className="flex flex-col items-center gap-2 text-center">
-            <h1 className="text-2xl font-bold">Login to your account</h1>
+            <h1 className="text-3xl font-bold text-blue-600">EngineerYourPath</h1>
+            <p className="text-sm font-medium text-gray-600 dark:text-gray-300">
+              For All Engineers Worldwide
+            </p>
+            <p className="text-xs text-gray-500">
+              Mechanical • Electrical • Civil • Chemical • Computer • Aerospace • Biomedical • Software
+            </p>
+            <h2 className="text-xl font-semibold mt-2">Login to your account</h2>
+            <p className="text-sm text-muted-foreground">
+              Choose Your Path. Build The Future.
+            </p>
           </div>
 
           <div className="grid gap-4">
@@ -88,7 +98,7 @@ function Login() {
                   <FormControl>
                     <Input
                       data-testid="email-input"
-                      placeholder="user@example.com"
+                      placeholder="engineer@example.com"
                       type="email"
                       {...field}
                     />
@@ -125,14 +135,14 @@ function Login() {
             />
 
             <LoadingButton type="submit" loading={loginMutation.isPending}>
-              Log In
+              Enter EngineerYourPath
             </LoadingButton>
           </div>
 
           <div className="text-center text-sm">
-            Don't have an account yet?{" "}
-            <RouterLink to="/signup" className="underline underline-offset-4">
-              Sign up
+            New Engineer?{" "}
+            <RouterLink to="/signup" className="underline underline-offset-4 font-semibold text-blue-600">
+              Create Account
             </RouterLink>
           </div>
         </form>
