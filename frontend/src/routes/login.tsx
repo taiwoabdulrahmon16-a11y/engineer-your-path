@@ -25,9 +25,9 @@ import useAuth, { isLoggedIn } from "@/hooks/useAuth"
 const formSchema = z.object({
   username: z.email({ message: "Invalid email address" }),
   password: z
-    .string()
-    .min(1, { message: "Password is required" })
-    .min(8, { message: "Password must be at least 8 characters" }),
+   .string()
+   .min(1, { message: "Password is required" })
+   .min(8, { message: "Password must be at least 8 characters" }),
 }) satisfies z.ZodType<AccessToken>
 
 type FormData = z.infer<typeof formSchema>
@@ -44,7 +44,7 @@ export const Route = createFileRoute("/login")({
   head: () => ({
     meta: [
       {
-        title: "EngineerYourPath - For All Engineers",
+        title: "EngineerYourPath - For All Engineers Worldwide",
       },
     ],
   }),
@@ -79,10 +79,10 @@ function Login() {
             <p className="text-sm font-medium text-gray-600 dark:text-gray-300">
               For All Engineers Worldwide
             </p>
-            <p className="text-xs text-gray-500">
-              Mechanical • Electrical • Civil • Chemical • Computer • Aerospace • Biomedical • Software
+            <p className="text-[10px] text-gray-500 text-center leading-relaxed px-2">
+              🌾 Agricultural Engineering • 🧪 Chemical Engineering • 🏗️ Civil Engineering • 🏭 Industrial and Production Engineering • ⚙️ Mechanical Engineering • 🔬 Metallurgical and Materials Engineering • ⛏️ Mining Engineering
             </p>
-            <h2 className="text-xl font-semibold mt-2">Login to your account</h2>
+            <h2 className="text-xl font-semibold mt-3">Login to your account</h2>
             <p className="text-sm text-muted-foreground">
               Choose Your Path. Build The Future.
             </p>
@@ -134,7 +134,7 @@ function Login() {
               )}
             />
 
-            <LoadingButton type="submit" loading={loginMutation.isPending}>
+            <LoadingButton type="submit" loading={loginMutation.isPending} className="bg-blue-600 hover:bg-blue-700">
               Enter EngineerYourPath
             </LoadingButton>
           </div>
